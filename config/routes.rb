@@ -1,5 +1,17 @@
 Website::Application.routes.draw do
 
+  get "feedbacks/new"
+  get "feedbacks/create"
+  get "feedbacks/update"
+  get "feedbacks/delete"
+  get "feedbacks/edit"
+  get "feedbacks/show"
+  get "events/new"
+  get "events/create"
+  get "events/update"
+  get "events/edit"
+  get "events/show"
+  get "events/delete"
   resources :udetails
 
   devise_for :users
@@ -10,6 +22,11 @@ Website::Application.routes.draw do
   get "pages/videos"
   get "pages/events"
   get "pages/event_organizer_contact"
+
+resources :events
+
+resources :feedbacks
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

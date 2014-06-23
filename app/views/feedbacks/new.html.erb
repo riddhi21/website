@@ -1,0 +1,22 @@
+<% if @feedbacks.errors.any? %>
+<div id="error_explanation">
+<h2><%= pluralize(@feedbacks.errors.count, "error") %>
+prohibited this <%= @feedbacks.class.to_s.underscore.humanize.downcase %>
+from being saved:</h2>
+<p>There were problems with the following fields:</p>
+<ul>
+<% @feedbacks.errors.full_messages.each do |msg| %>
+<li><%= msg %></li>
+<% end %>
+</ul>
+</div>
+<% end %>
+<%= form_for (@feedbacks ) do |f| %>
+	<%= f.label :Username  %>
+	<%= f.text_field :username %>
+	<%= f.label :Feedbck %>
+	<%= f.text_field :feedback %>
+	
+	 <%= f.submit "Submit", :disable_with => 'Submiting...' %>
+	  
+<% end %>
