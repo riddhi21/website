@@ -5,9 +5,15 @@ class PagesController < ApplicationController
   def about
   end
 
-  def new_talents
+  def photos
   end
 
-  def event_organizer_contact
+  def videos
+  end
+
+  def events
+  end
+
+  def event_organizer
   end
 end

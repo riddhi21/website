@@ -1,0 +1,38 @@
+
+</br>
+</br>
+</br>
+<table class="table table-bordered">
+	<thead>
+      <tr>
+         <th>Date</th>
+         <th>Suburb</th>
+         <th>Venue</th>
+         <th>Time</th>
+         <th>Judges</th>
+      </tr>
+   </thead>	
+
+	<% @udetails.each do |s| %>
+<tr>
+<td>
+	<%= s.Date %>
+</td>
+<td> 
+	<%=s.Suburb %>
+</td>
+<td>
+	<%=s.Venue %>
+</td>
+<td>
+	<%=s.Time %>
+</td>
+<td>
+	<%=s.Judges %>
+</td>
+</tr>
+	<% end %>
+</table>
+
+
+

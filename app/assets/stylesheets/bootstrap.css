@@ -8,6 +8,113 @@
  * Designed and built with all the love in the world by @mdo and @fat.
  */
 /* carousel */
+body {
+    margin: 0 0 0; /* bottom = footer height */
+}
+footer {
+    position: 10px;
+    left: 0;
+    bottom: 0;
+}
+
+
+
+
+
+.transition-timer-carousel .carousel-caption {
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 4%, rgba(0,0,0,0.5) 32%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(4%,rgba(0,0,0,0.1)), color-stop(32%,rgba(0,0,0,0.5)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+  width: 100%;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  text-align: left;
+  padding-top: 5px;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+.transition-timer-carousel .carousel-caption .carousel-caption-header {
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+@media (min-width: 970px) {
+    /* Lower the font size of the carousel caption header so that our caption
+    doesn't take up the full image/slide on smaller screens */
+  .transition-timer-carousel .carousel-caption .carousel-caption-header {
+    font-size: 36px;
+  }
+}
+.transition-timer-carousel .carousel-indicators {
+  bottom: 0px;
+  margin-bottom: 5px;
+}
+.transition-timer-carousel .carousel-control {
+  z-index: 11;
+}
+.transition-timer-carousel .transition-timer-carousel-progress-bar {
+    height: 5px;
+    background-color: #5cb85c;
+    width: 0%;
+    margin: -5px 0px 0px 0px;
+    border: none;
+    z-index: 11;
+    position: relative;
+}
+.transition-timer-carousel .transition-timer-carousel-progress-bar.animate{
+    /* We make the transition time shorter to avoid the slide transitioning
+    before the timer bar is "full" - change the 4.25s here to fit your
+    carousel's transition time */
+    -webkit-transition: width 4.25s linear;
+  -moz-transition: width 4.25s linear;
+  -o-transition: width 4.25s linear;
+  transition: width 4.25s linear;
+}
+/*  dsfffgdfg*/
+
+.photo{
+height: 250px;
+width: 3000px;
+border-radius: 20px;
+border-style: black;
+}
+
+footer, .push {
+  height: 155px; /* '.push' must be the same height as 'footer' */
+}
+
+
+
+
+
+.bgimage {
+  background-image: url("/assets/multi.jpg");
+ background-size:cover;
+
+}
+.img1{
+  
+
+top: 570px; 
+left: 67px; 
+height: 250px; 
+width: 250px; 
+border-top-left-radius: 35px; 
+border-top-right-radius: 35px; 
+border-bottom-right-radius: 35px; 
+border-bottom-left-radius: 35px; 
+padding-top: 0px;
+
+}
+
+
+
+
 #quote-carousel 
 {
   padding: 0 10px 30px 10px;
@@ -24,9 +131,7 @@ a.list-group-item.active small {
 .stars {
     margin:20px auto 1px;    
 }
-body {
-  padding-top: 50px;
-}
+
  
 .thumbnail {
     position:relative;
@@ -57,7 +162,7 @@ body {
 #quote-carousel .carousel-control
 {
   background: none;
-  color: #222;
+ 
   font-size: 2.3em;
   text-shadow: none;
   margin-top: 30px;
@@ -112,9 +217,7 @@ body {
     margin-right: 10px;
 }
 
-body {
-  background-color:grey;
-}
+
 
 
 /**
@@ -385,6 +488,8 @@ body {
   line-height: 20px;
   color: #333333;
   background-color: #ffffff;
+  word-break: break-all;
+  height: 100%;
 }
 
 a {
@@ -446,7 +551,7 @@ a:focus {
 .navbar-static-top .container,
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
-  width: 940px;
+  width: 950px;
 }
 
 .span12 {

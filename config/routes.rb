@@ -1,10 +1,14 @@
 Website::Application.routes.draw do
 
+  resources :udetails
+
   devise_for :users
   root :to => "pages#home"
   get "pages/home"
   get "pages/about"
-  get "pages/new_talents"
+  get "pages/photos"
+  get "pages/videos"
+  get "pages/events"
   get "pages/event_organizer_contact"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

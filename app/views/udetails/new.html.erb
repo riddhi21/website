@@ -1,0 +1,33 @@
+<% if @udetails.errors.any? %>
+<div id="error_explanation">
+<h2><%= pluralize(@udetails.errors.count, "error") %>
+prohibited this <%= @udetails.class.to_s.underscore.humanize.downcase %>
+from being saved:</h2>
+<p>There were problems with the following fields:</p>
+<ul>
+<% @udetails.errors.full_messages.each do |msg| %>
+<li><%= msg %></li>
+<% end %>
+</ul>
+</div>
+<% end %>
+<%= form_for (@udetails ) do |f| %>
+	<%= f.label :First_Name  %>
+	<%= f.text_field :FirstName %>
+	<%= f.label :Last_Name  %>
+	<%= f.text_field :Lastname %>
+	<%= f.label :Date_Of_Birth  %>
+	<%= f.text_field :DateOfBirth%>
+	<%= f.label :Address  %>
+	<%= f.text_field :Address %>
+	<%= f.label :Mobile_No %>
+	<%= f.text_field :Mobileno%>
+	<%= f.label :Sex %>
+	<%= f.text_field :sex %>
+	<%= f.label :Skills  %>
+	<%= f.text_field :skills %>
+	
+	 <%= f.submit "Submit", :disable_with => 'Submiting...' %>
+	  
+<% end %>
+

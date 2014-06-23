@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <title>Website</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </head>
-<body data-no-turbolink = "true" style = "background-color : #8B008B">
+<body data-no-turbolink = "true" class="bgimage" style="color:white;">
 		<div class="navbar">
-              <div class="navbar-inner">
+              <div class="navbar-inverse">
                 <div class="container">
                   <ul class="nav">
                     <li> <%=link_to "Home" , pages_home_path %> </li>
                     <li> <%=link_to "About" , pages_about_path %> </li>
-                    <li> <%=link_to "New Talents" , pages_new_talents_path %> </li>
+                    <li> <%=link_to "Photos" , pages_photos_path %> </li>
+                    <li><%=link_to "videos", pages_videos_path%></li>
+                    <li><%=link_to "Events", pages_events_path%></li>
                     <li> <%=link_to "Event organizer Contact" , pages_event_organizer_contact_path %> </li>
                   </ul>
                     <ul class="nav pull-right">
-                      <% if signed_in? %>
+                      <% if user_signed_in? %>
                       <li><%= link_to "signout" , destroy_user_session_path , :method => :delete %></li>
                       <% else %>
                         <li><%= link_to "sign in" , new_user_session_path %></li>
@@ -29,15 +32,21 @@
               </div>
 
             </div>
-		</div>
-       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-
-
-
+		
+     
+<div class ="container">
 
 
 <%= yield %>
+</div>
 
+
+
+ 
+    <hr>
+  <footer>e-platinum ways Softwares</footer>
+  </div>
 </body>
 </html>
+
+

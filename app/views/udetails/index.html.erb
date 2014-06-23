@@ -1,0 +1,47 @@
+
+</br>
+</br>
+</br>
+<table class="table table-bordered">
+	<thead>
+      <tr>
+         <th>FIRST NAME</th>
+         <th>LAST NAME</th>
+         <th>DATE OF BIRTH</th>
+         <th>ADDRESS</th>
+         <th>SEX</th>
+         <th>MOBILE NO.</th>
+         <th>SKILLS</th>
+      </tr>
+   </thead>	
+
+	<% @udetails.each do |s| %>
+<tr>
+<td>
+	<%= s.FirstName %>
+</td>
+<td> 
+	<%=s.Lastname %>
+</td>
+<td>
+	<%=s.DateOfBirth %>
+</td>
+<td>
+	<%=s.Address %>
+</td>
+<td>
+	<%=s.Mobileno %>
+</td>
+<td>
+	<%=s.sex %>
+</td>
+<td>
+	<%=s.skills %>
+</td>
+</tr>
+	<% end %>
+</table>
+
+
+
+	
