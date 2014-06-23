@@ -8,19 +8,6 @@
  * Designed and built with all the love in the world by @mdo and @fat.
  */
 /* carousel */
-body {
-    margin: 0 0 0; /* bottom = footer height */
-}
-footer {
-    position: 10px;
-    left: 0;
-    bottom: 0;
-}
-
-
-
-
-
 .transition-timer-carousel .carousel-caption {
     background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 4%, rgba(0,0,0,0.5) 32%, rgba(0,0,0,1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(4%,rgba(0,0,0,0.1)), color-stop(32%,rgba(0,0,0,0.5)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
